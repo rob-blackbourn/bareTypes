@@ -15,8 +15,6 @@ from .types import (
     ASGIInstance,
     ASGIApp,
 
-    StartupHandler,
-    ShutdownHandler,
     LifespanHandler,
 
     Header,
@@ -24,7 +22,9 @@ from .types import (
 
     RouteMatches,
     Content,
-    Reply,
+
+    PushResponse,
+    PushResponses,
 
     WebSocket,
 
@@ -54,8 +54,6 @@ __all__ = [
     'ASGIInstance',
     'ASGIApp',
 
-    'StartupHandler',
-    'ShutdownHandler',
     'LifespanHandler',
 
     'Header',
@@ -63,7 +61,9 @@ __all__ = [
 
     'RouteMatches',
     'Content',
-    'Reply',
+
+    'PushResponse',
+    'PushResponses',
 
     'WebSocket',
 
