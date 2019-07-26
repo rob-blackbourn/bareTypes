@@ -81,7 +81,9 @@ class WebSocket(metaclass=ABCMeta):
         ...
 
 
-HttpResponse = Tuple[int, Optional[Headers], Optional[Content], Optional[PushResponses]]
+Http11Response = Tuple[int, Optional[Headers], Optional[Content]]
+Http2Response = Tuple[int, Optional[Headers], Optional[Content], Optional[PushResponses]]
+HttpResponse = Union[Http11Response, Http2Response]
 HttpRequestCallback = Callable[[Scope, Info, RouteMatches, Content], Awaitable[HttpResponse]]
 WebSocketRequestCallback = Callable[[Scope, Info, RouteMatches, WebSocket], Awaitable[None]]
 HttpMiddlewareCallback = Callable[[Scope, Info, RouteMatches, Content, HttpRequestCallback], Awaitable[HttpResponse]]
