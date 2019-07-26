@@ -1,5 +1,5 @@
 from abc import ABCMeta, abstractmethod
-from typing import Mapping, MutableMapping, AsyncIterable, Union, AbstractSet, Iterable
+from typing import Mapping, MutableMapping, AsyncIterable, Union, AbstractSet, Iterable, List
 from typing import Any, Callable, Optional, Tuple
 from typing import Awaitable
 
@@ -34,7 +34,7 @@ ASGIApp = Callable[[Scope], ASGIInstance]
 LifespanHandler = Callable[[Scope, Info, Message], Awaitable[None]]
 
 Header = Tuple[bytes, bytes]
-Headers = Iterable[Header]
+Headers = List[Header]
 
 RouteMatches = Mapping[str, Any]
 Content = AsyncIterable[bytes]
