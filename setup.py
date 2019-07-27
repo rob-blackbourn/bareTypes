@@ -10,7 +10,7 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
-__version__ = '3.0.4'
+__version__ = '3.0.5'
 
 setup(
     name='baretypes',
