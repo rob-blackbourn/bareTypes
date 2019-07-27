@@ -82,7 +82,7 @@ class WebSocket(metaclass=ABCMeta):
 
 
 HttpResponse = Union[
-    Tuple[int],
+    int,
     Tuple[int, Optional[Headers]],
     Tuple[int, Optional[Headers], Optional[Content]],
     Tuple[int, Optional[Headers], Optional[Content], Optional[PushResponses]]
