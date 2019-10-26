@@ -1,3 +1,5 @@
+"""bareTypes exported types"""
+
 from .types import (
     ParseError,
     HttpInternalError,
