@@ -1,4 +1,4 @@
-"""bareTypes exported types"""
+"""baretypes"""
 
 from .types import (
     ParseError,

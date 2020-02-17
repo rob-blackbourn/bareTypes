@@ -1,0 +1,37 @@
+site_name: bareTypes
+site_description: Types for the bareASGI and bareClient packages
+site_dir: docs
+
+docs_dir: documentation
+
+repo_name: rob-blackbourn/bareTypes
+repo_url: https://github.com/rob-blackbourn/bareTypes
+edit_uri: ""
+
+theme:
+    name: 'material'
+    logo: images/peach.svg
+    favicon: images/favicon.ico
+
+nav:
+  - index.md
+  - API:
+    - baretypes: api/baretypes.types.md
+  
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - jetblack_markdown.autodoc:
+      class_from_init: true
+      ignore_dunder: true
+      ignore_private: true
+      ignore_all: false
+      ignore_inherited: false
+      follow_module_tree: false
+      prefer_docstring: true
+  - toc:
+      permalink: true
+
+extra_css:
+    - css/custom.css

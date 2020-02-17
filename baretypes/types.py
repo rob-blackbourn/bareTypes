@@ -67,39 +67,38 @@ class WebSocket(metaclass=ABCMeta):
         """Accept the socket.
 
         This must be done before any other action is taken.
-
-        :param subprotocol: An optional subprotocol sent by the client.
-        :type subprotocol: Optional[str], optional
-        :param headers: Optional headers to send, defaults to None
-        :type headers: Optional[List[Header]], optional
+        
+        Args:
+            subprotocol (Optional[str], optional): An optional subprotocol sent
+                by the client. Defaults to None.
+            headers (Optional[List[Header]], optional): Optional headers to
+                send. Defaults to None.
         """
-        ...
 
     @abstractmethod
     async def receive(self) -> Optional[Union[bytes, str]]:
         """Receive data from the WebSocket.
-
-        :return: Either bytes of a string depending on the client.
+        
+        Returns:
+            Optional[Union[bytes, str]]: Either bytes of a string depending on
+                the client.
         """
-        ...
 
     @abstractmethod
     async def send(self, content: Union[bytes, str]) -> None:
         """Send data to the client.
-
-        :param content: Either bytes or a string.
-        :type content: Union[bytes, str]
+        
+        Args:
+            content (Union[bytes, str]): Either bytes or a string.
         """
-        ...
 
     @abstractmethod
     async def close(self, code: int = 1000) -> None:
-        """Closes the WebSocket.
-
-        :param code: The reason code (defaults to 1000).
-        :type code: Optional[int], optional
+        """Close the WebSocket.
+        
+        Args:
+            code (int, optional): The reason code. Defaults to 1000.
         """
-        ...
 
 
 HttpResponse = Union[
@@ -122,16 +121,16 @@ class HttpRouter(metaclass=ABCMeta):
     @property  # type: ignore
     @abstractmethod
     def not_found_response(self) -> HttpResponse:
-        """The response when a handler could not be found for a method/path"""
+        """The response when a handler could not be found for a method/path
+        
+        Returns:
+            HttpResponse: The response when a route cannot be found.
+        """
 
     @not_found_response.setter  # type: ignore
     @abstractmethod
     def not_found_response(self, value: HttpResponse) -> None:
-        """The response when a handler could not be found for a method/path
-
-        :param value: The handler for an un-routable request
-        :type value: HttpResponse
-        """
+        ...
 
     @abstractmethod
     def add(
@@ -140,14 +139,12 @@ class HttpRouter(metaclass=ABCMeta):
             path: str,
             callback: HttpRequestCallback
     ) -> None:
-        """Add a handler
-
-        :param methods: The supported HTTP methods
-        :type methods: AbstractSet[str]
-        :param path: The path
-        :type path: str
-        :param callback: The request handler
-        :type callback: HttpRequestCallback
+        """Add an HTTP request handler
+        
+        Args:
+            methods (AbstractSet[str]): The supported HTTP methods.
+            path (str): The path.
+            callback (HttpRequestCallback): The request handler.
         """
 
     @abstractmethod
@@ -157,13 +154,14 @@ class HttpRouter(metaclass=ABCMeta):
             path: str
     ) -> Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]:
         """Resolve a request to a handler with the route matches
-
-        :param method: The HTTP method.
-        :type method: str
-        :param path: The path
-        :type path: str
-        :return: A handler and the optional route matches.
-        :rtype: Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]
+        
+        Args:
+            method (str): The HTTP method.
+            path (str): The path.
+        
+        Returns:
+            Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]: A
+                handler and the optional route matches.
         """
 
 
@@ -176,12 +174,11 @@ class WebSocketRouter(metaclass=ABCMeta):
             path: str,
             callback: WebSocketRequestCallback
     ) -> None:
-        """Add the handler for a route
-
-        :param path: The path.
-        :type path: str
-        :param callback: The handler
-        :type callback: WebSocketRequestCallback
+        """Add the WebSocket handler for a route
+        
+        Args:
+            path (str): The path.
+            callback (WebSocketRequestCallback): The handler
         """
 
     @abstractmethod
@@ -190,9 +187,11 @@ class WebSocketRouter(metaclass=ABCMeta):
             path: str
     ) -> Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]:
         """Resolve a route to a handler
-
-        :param path: The path
-        :type path: str
-        :return: A handler and possible route matches
-        :rtype: Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]
+        
+        Args:
+            path (str): The path
+        
+        Returns:
+            Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]: A
+                handler and possible route matches
         """
