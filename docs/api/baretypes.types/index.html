@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -497,6 +497,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#parameters_2" class="md-nav__link">
     Parameters
   </a>
@@ -506,13 +513,6 @@
           <li class="md-nav__item">
   <a href="#returns_2" class="md-nav__link">
     Returns
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
   </a>
   
 </li>
@@ -983,6 +983,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#parameters_2" class="md-nav__link">
     Parameters
   </a>
@@ -992,13 +999,6 @@
           <li class="md-nav__item">
   <a href="#returns_2" class="md-nav__link">
     Returns
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    Description
   </a>
   
 </li>
@@ -1237,13 +1237,13 @@
   <a class="headerlink" href="#module-baretypestypes" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
 <p>Types for bareASGI and bareClient</p>
-<div class="autodoc-attributes">
-
-</div>
 <div class="autodoc-description">
 
 </div>
 <div class="autodoc-examples">
+
+</div>
+<div class="autodoc-attributes">
 
 </div>
 <div class="autodoc-class">
@@ -1252,10 +1252,10 @@
 <a class="headerlink" href="#class-httpdisconnecterrorexception" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h4>
 <p>Exception raise on HTTP disconnect</p>
-<br />
 <div class="autodoc-description">
 
 </div>
+<br />
 <div class="autodoc-attributes">
 
 </div>
@@ -1275,10 +1275,10 @@
 <a class="headerlink" href="#class-httpinternalerrorexception" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_2">Summary<a class="headerlink" href="#summary_2" title="Permanent link">&para;</a></h4>
 <p>Exception raised for an internal error</p>
-<br />
 <div class="autodoc-description">
 
 </div>
+<br />
 <div class="autodoc-attributes">
 
 </div>
@@ -1298,11 +1298,11 @@
 <a class="headerlink" href="#class-httprouter" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_3">Summary<a class="headerlink" href="#summary_3" title="Permanent link">&para;</a></h4>
 <p>The interface for an HTTP router</p>
-<div class="autodoc-signature"><span class="autodoc-qualifier">baretypes</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">HttpRouter</var><span class="autodoc-punctuation">(</span><span class="autodoc-punctuation">)</span><span class="autodoc-punctuation"> -&gt; </span><span class="autodoc-vartype">None</span></div>
-<br />
 <div class="autodoc-description">
 
 </div>
+<div class="autodoc-signature"><span class="autodoc-qualifier">baretypes</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">HttpRouter</var><span class="autodoc-punctuation">(</span><span class="autodoc-punctuation">)</span><span class="autodoc-punctuation"> -&gt; </span><span class="autodoc-vartype">None</span></div>
+<br />
 <div class="autodoc-attributes">
 
 </div>
@@ -1313,6 +1313,9 @@
 <a class="headerlink" href="#property-httprouternot_found_response" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_4">Summary<a class="headerlink" href="#summary_4" title="Permanent link">&para;</a></h4>
 <p>The response when a handler could not be found for a method/path</p>
+<div class="autodoc-description">
+
+</div>
 <div class="autodoc-property">
       <var class="autodoc-varname">not_found_response</var><span class="autodoc-punctuation"> -&gt; </span><span class="autodoc-vartype">HttpResponse</span>
     </div>
@@ -1320,9 +1323,6 @@
       <var class="autodoc-varname">not_found_response</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">HttpResponse</span><span class="autodoc-punctuation"> = ...</span>
     </div>
 <div class="autodoc-raises">
-
-</div>
-<div class="autodoc-description">
 
 </div>
 <div class="autodoc-examples">
@@ -1338,6 +1338,9 @@
 <a class="headerlink" href="#method-httprouteradd" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_5">Summary<a class="headerlink" href="#summary_5" title="Permanent link">&para;</a></h4>
 <p>Add an HTTP request handler</p>
+<div class="autodoc-description">
+
+</div>
 <div class="autodoc-signature"><span class="autodoc-qualifier">HttpRouter</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">add</var><span class="autodoc-punctuation">(</span><br />
 <div class="autodoc-argument">
         <var class="autodoc-varname">methods</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">AbstractSet[str]</span><span class="autodoc-punctuation">,</span></div>
@@ -1349,9 +1352,9 @@
 <br />
 <div class="autodoc-parameters">
 <h4 class="autodoc-title" id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
-<var class="autodoc-varname">methods</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">AbstractSet[str]</span><span class="autodoc-punctuation"> (optional)</span><p>The supported HTTP methods.</p>
-<var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><span class="autodoc-punctuation"> (optional)</span><p>The path.</p>
-<var class="autodoc-varname">callback</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">HttpRequestCallback</span><span class="autodoc-punctuation"> (optional)</span><p>The request handler.</p>
+<var class="autodoc-varname">methods</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">AbstractSet[str]</span><p>The supported HTTP methods.</p>
+<var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><p>The path.</p>
+<var class="autodoc-varname">callback</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">HttpRequestCallback</span><p>The request handler.</p>
 </div>
 <div class="autodoc-returns">
 <h4 class="autodoc-title" id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
@@ -1359,9 +1362,6 @@
 
 </div>
 <div class="autodoc-raises">
-
-</div>
-<div class="autodoc-description">
 
 </div>
 <div class="autodoc-examples">
@@ -1374,6 +1374,9 @@
 <a class="headerlink" href="#method-httprouterresolve" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_6">Summary<a class="headerlink" href="#summary_6" title="Permanent link">&para;</a></h4>
 <p>Resolve a request to a handler with the route matches</p>
+<div class="autodoc-description">
+
+</div>
 <div class="autodoc-signature"><span class="autodoc-qualifier">HttpRouter</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">resolve</var><span class="autodoc-punctuation">(</span><br />
 <div class="autodoc-argument">
         <var class="autodoc-varname">method</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><span class="autodoc-punctuation">,</span></div>
@@ -1383,8 +1386,8 @@
 <br />
 <div class="autodoc-parameters">
 <h4 class="autodoc-title" id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
-<var class="autodoc-varname">method</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><span class="autodoc-punctuation"> (optional)</span><p>The HTTP method.</p>
-<var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><span class="autodoc-punctuation"> (optional)</span><p>The path.</p>
+<var class="autodoc-varname">method</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><p>The HTTP method.</p>
+<var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><p>The path.</p>
 </div>
 <div class="autodoc-returns">
 <h4 class="autodoc-title" id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
@@ -1393,9 +1396,6 @@
 handler and the optional route matches.</span>
 </div>
 <div class="autodoc-raises">
-
-</div>
-<div class="autodoc-description">
 
 </div>
 <div class="autodoc-examples">
@@ -1414,10 +1414,10 @@ handler and the optional route matches.</span>
 <a class="headerlink" href="#class-parseerrorexception" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_7">Summary<a class="headerlink" href="#summary_7" title="Permanent link">&para;</a></h4>
 <p>Exception raised on a parse error</p>
-<br />
 <div class="autodoc-description">
 
 </div>
+<br />
 <div class="autodoc-attributes">
 
 </div>
@@ -1437,11 +1437,11 @@ handler and the optional route matches.</span>
 <a class="headerlink" href="#class-websocket" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_8">Summary<a class="headerlink" href="#summary_8" title="Permanent link">&para;</a></h4>
 <p>The interface for a server side WebSocket.</p>
-<div class="autodoc-signature"><span class="autodoc-qualifier">baretypes</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">WebSocket</var><span class="autodoc-punctuation">(</span><span class="autodoc-punctuation">)</span><span class="autodoc-punctuation"> -&gt; </span><span class="autodoc-vartype">None</span></div>
-<br />
 <div class="autodoc-description">
 
 </div>
+<div class="autodoc-signature"><span class="autodoc-qualifier">baretypes</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">WebSocket</var><span class="autodoc-punctuation">(</span><span class="autodoc-punctuation">)</span><span class="autodoc-punctuation"> -&gt; </span><span class="autodoc-vartype">None</span></div>
+<br />
 <div class="autodoc-attributes">
 
 </div>
@@ -1456,6 +1456,10 @@ handler and the optional route matches.</span>
 <a class="headerlink" href="#async-method-websocketaccept" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_9">Summary<a class="headerlink" href="#summary_9" title="Permanent link">&para;</a></h4>
 <p>Accept the socket.</p>
+<div class="autodoc-description">
+<h4 class="autodoc-title" id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>This must be done before any other action is taken.</p>
+</div>
 <div class="autodoc-signature"><span class="autodoc-keyword">async</span><span> </span><span class="autodoc-qualifier">WebSocket</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">accept</var><span class="autodoc-punctuation">(</span><br />
 <div class="autodoc-argument">
         <var class="autodoc-varname">subprotocol</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">Optional[str]</span><span class="autodoc-punctuation">,</span></div>
@@ -1465,9 +1469,9 @@ handler and the optional route matches.</span>
 <br />
 <div class="autodoc-parameters">
 <h4 class="autodoc-title" id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
-<var class="autodoc-varname">subprotocol</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">Optional[str]</span><p>An optional subprotocol sent
+<var class="autodoc-varname">subprotocol</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">Optional[str]</span><span class="autodoc-punctuation"> (optional)</span><p>An optional subprotocol sent
 by the client. Defaults to None.</p>
-<var class="autodoc-varname">headers</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">Optional[List[Header]]</span><p>Optional headers to
+<var class="autodoc-varname">headers</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">Optional[List[Header]]</span><span class="autodoc-punctuation"> (optional)</span><p>Optional headers to
 send. Defaults to None.</p>
 </div>
 <div class="autodoc-returns">
@@ -1477,10 +1481,6 @@ send. Defaults to None.</p>
 </div>
 <div class="autodoc-raises">
 
-</div>
-<div class="autodoc-description">
-<h4 class="autodoc-title" id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
-<p>This must be done before any other action is taken.</p>
 </div>
 <div class="autodoc-examples">
 
@@ -1492,6 +1492,9 @@ send. Defaults to None.</p>
 <a class="headerlink" href="#async-method-websocketclose" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_10">Summary<a class="headerlink" href="#summary_10" title="Permanent link">&para;</a></h4>
 <p>Close the WebSocket.</p>
+<div class="autodoc-description">
+
+</div>
 <div class="autodoc-signature"><span class="autodoc-keyword">async</span><span> </span><span class="autodoc-qualifier">WebSocket</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">close</var><span class="autodoc-punctuation">(</span><br />
 <div class="autodoc-argument">
         <var class="autodoc-varname">code</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">int</span></div>
@@ -1499,7 +1502,7 @@ send. Defaults to None.</p>
 <br />
 <div class="autodoc-parameters">
 <h4 class="autodoc-title" id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
-<var class="autodoc-varname">code</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">int</span><p>The reason code. Defaults to 1000.</p>
+<var class="autodoc-varname">code</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">int</span><span class="autodoc-punctuation"> (optional)</span><p>The reason code. Defaults to 1000.</p>
 </div>
 <div class="autodoc-returns">
 <h4 class="autodoc-title" id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
@@ -1507,9 +1510,6 @@ send. Defaults to None.</p>
 
 </div>
 <div class="autodoc-raises">
-
-</div>
-<div class="autodoc-description">
 
 </div>
 <div class="autodoc-examples">
@@ -1522,6 +1522,9 @@ send. Defaults to None.</p>
 <a class="headerlink" href="#async-method-websocketreceive" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_11">Summary<a class="headerlink" href="#summary_11" title="Permanent link">&para;</a></h4>
 <p>Receive data from the WebSocket.</p>
+<div class="autodoc-description">
+
+</div>
 <div class="autodoc-signature"><span class="autodoc-keyword">async</span><span> </span><span class="autodoc-qualifier">WebSocket</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">receive</var><span class="autodoc-punctuation">(</span><span class="autodoc-punctuation">)</span><span class="autodoc-punctuation"> -&gt; </span><span class="autodoc-vartype">Optional[Union[bytes, str]]</span></div>
 <br />
 <div class="autodoc-returns">
@@ -1531,9 +1534,6 @@ send. Defaults to None.</p>
 the client.</span>
 </div>
 <div class="autodoc-raises">
-
-</div>
-<div class="autodoc-description">
 
 </div>
 <div class="autodoc-examples">
@@ -1546,6 +1546,9 @@ the client.</span>
 <a class="headerlink" href="#async-method-websocketsend" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_12">Summary<a class="headerlink" href="#summary_12" title="Permanent link">&para;</a></h4>
 <p>Send data to the client.</p>
+<div class="autodoc-description">
+
+</div>
 <div class="autodoc-signature"><span class="autodoc-keyword">async</span><span> </span><span class="autodoc-qualifier">WebSocket</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">send</var><span class="autodoc-punctuation">(</span><br />
 <div class="autodoc-argument">
         <var class="autodoc-varname">content</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">Union[bytes, str]</span></div>
@@ -1553,7 +1556,7 @@ the client.</span>
 <br />
 <div class="autodoc-parameters">
 <h4 class="autodoc-title" id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
-<var class="autodoc-varname">content</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">Union[bytes, str]</span><span class="autodoc-punctuation"> (optional)</span><p>Either bytes or a string.</p>
+<var class="autodoc-varname">content</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">Union[bytes, str]</span><p>Either bytes or a string.</p>
 </div>
 <div class="autodoc-returns">
 <h4 class="autodoc-title" id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
@@ -1561,9 +1564,6 @@ the client.</span>
 
 </div>
 <div class="autodoc-raises">
-
-</div>
-<div class="autodoc-description">
 
 </div>
 <div class="autodoc-examples">
@@ -1582,10 +1582,10 @@ the client.</span>
 <a class="headerlink" href="#class-websocketinternalerrorexception" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_13">Summary<a class="headerlink" href="#summary_13" title="Permanent link">&para;</a></h4>
 <p>Exception raised for a WebSocket internal error</p>
-<br />
 <div class="autodoc-description">
 
 </div>
+<br />
 <div class="autodoc-attributes">
 
 </div>
@@ -1605,11 +1605,11 @@ the client.</span>
 <a class="headerlink" href="#class-websocketrouter" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_14">Summary<a class="headerlink" href="#summary_14" title="Permanent link">&para;</a></h4>
 <p>The interface for a WebSocket router</p>
-<div class="autodoc-signature"><span class="autodoc-qualifier">baretypes</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">WebSocketRouter</var><span class="autodoc-punctuation">(</span><span class="autodoc-punctuation">)</span><span class="autodoc-punctuation"> -&gt; </span><span class="autodoc-vartype">None</span></div>
-<br />
 <div class="autodoc-description">
 
 </div>
+<div class="autodoc-signature"><span class="autodoc-qualifier">baretypes</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">WebSocketRouter</var><span class="autodoc-punctuation">(</span><span class="autodoc-punctuation">)</span><span class="autodoc-punctuation"> -&gt; </span><span class="autodoc-vartype">None</span></div>
+<br />
 <div class="autodoc-attributes">
 
 </div>
@@ -1624,6 +1624,9 @@ the client.</span>
 <a class="headerlink" href="#method-websocketrouteradd" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_15">Summary<a class="headerlink" href="#summary_15" title="Permanent link">&para;</a></h4>
 <p>Add the WebSocket handler for a route</p>
+<div class="autodoc-description">
+
+</div>
 <div class="autodoc-signature"><span class="autodoc-qualifier">WebSocketRouter</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">add</var><span class="autodoc-punctuation">(</span><br />
 <div class="autodoc-argument">
         <var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><span class="autodoc-punctuation">,</span></div>
@@ -1633,8 +1636,8 @@ the client.</span>
 <br />
 <div class="autodoc-parameters">
 <h4 class="autodoc-title" id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
-<var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><span class="autodoc-punctuation"> (optional)</span><p>The path.</p>
-<var class="autodoc-varname">callback</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">WebSocketRequestCallback</span><span class="autodoc-punctuation"> (optional)</span><p>The handler</p>
+<var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><p>The path.</p>
+<var class="autodoc-varname">callback</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">WebSocketRequestCallback</span><p>The handler</p>
 </div>
 <div class="autodoc-returns">
 <h4 class="autodoc-title" id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
@@ -1642,9 +1645,6 @@ the client.</span>
 
 </div>
 <div class="autodoc-raises">
-
-</div>
-<div class="autodoc-description">
 
 </div>
 <div class="autodoc-examples">
@@ -1657,6 +1657,9 @@ the client.</span>
 <a class="headerlink" href="#method-websocketrouterresolve" title="Permanent link">&para;</a></h3>
 <h4 class="autodoc-title" id="summary_16">Summary<a class="headerlink" href="#summary_16" title="Permanent link">&para;</a></h4>
 <p>Resolve a route to a handler</p>
+<div class="autodoc-description">
+
+</div>
 <div class="autodoc-signature"><span class="autodoc-qualifier">WebSocketRouter</span><span class="autodoc-punctuation">.</span><var class="autodoc-varname">resolve</var><span class="autodoc-punctuation">(</span><br />
 <div class="autodoc-argument">
         <var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span></div>
@@ -1664,7 +1667,7 @@ the client.</span>
 <br />
 <div class="autodoc-parameters">
 <h4 class="autodoc-title" id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
-<var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><span class="autodoc-punctuation"> (optional)</span><p>The path</p>
+<var class="autodoc-varname">path</var><span class="autodoc-punctuation">: </span><span class="autodoc-vartype">str</span><p>The path</p>
 </div>
 <div class="autodoc-returns">
 <h4 class="autodoc-title" id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">&para;</a></h4>
@@ -1673,9 +1676,6 @@ the client.</span>
 handler and possible route matches</span>
 </div>
 <div class="autodoc-raises">
-
-</div>
-<div class="autodoc-description">
 
 </div>
 <div class="autodoc-examples">
@@ -1748,7 +1748,7 @@ handler and possible route matches</span>
     
       <script src="../../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"../.."}})</script>
       
     
   </body>
