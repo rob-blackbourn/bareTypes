@@ -67,7 +67,7 @@ class WebSocket(metaclass=ABCMeta):
         """Accept the socket.
 
         This must be done before any other action is taken.
-        
+
         Args:
             subprotocol (Optional[str], optional): An optional subprotocol sent
                 by the client. Defaults to None.
@@ -78,7 +78,7 @@ class WebSocket(metaclass=ABCMeta):
     @abstractmethod
     async def receive(self) -> Optional[Union[bytes, str]]:
         """Receive data from the WebSocket.
-        
+
         Returns:
             Optional[Union[bytes, str]]: Either bytes of a string depending on
                 the client.
@@ -87,7 +87,7 @@ class WebSocket(metaclass=ABCMeta):
     @abstractmethod
     async def send(self, content: Union[bytes, str]) -> None:
         """Send data to the client.
-        
+
         Args:
             content (Union[bytes, str]): Either bytes or a string.
         """
@@ -95,24 +95,36 @@ class WebSocket(metaclass=ABCMeta):
     @abstractmethod
     async def close(self, code: int = 1000) -> None:
         """Close the WebSocket.
-        
+
         Args:
             code (int, optional): The reason code. Defaults to 1000.
         """
 
 
+HttpFullResponse = Tuple[
+    int,
+    Optional[Headers],
+    Optional[Content],
+    Optional[PushResponses]
+]
 HttpResponse = Union[
     int,
     Tuple[int, Optional[Headers]],
     Tuple[int, Optional[Headers], Optional[Content]],
-    Tuple[int, Optional[Headers], Optional[Content], Optional[PushResponses]]
+    HttpFullResponse
 ]
-HttpRequestCallback = Callable[[Scope, Info,
-                                RouteMatches, Content], Awaitable[HttpResponse]]
-WebSocketRequestCallback = Callable[[
-    Scope, Info, RouteMatches, WebSocket], Awaitable[None]]
-HttpMiddlewareCallback = Callable[[
-    Scope, Info, RouteMatches, Content, HttpRequestCallback], Awaitable[HttpResponse]]
+HttpRequestCallback = Callable[
+    [Scope, Info, RouteMatches, Content],
+    Awaitable[HttpResponse]
+]
+WebSocketRequestCallback = Callable[
+    [Scope, Info, RouteMatches, WebSocket],
+    Awaitable[None]
+]
+HttpMiddlewareCallback = Callable[
+    [Scope, Info, RouteMatches, Content, HttpRequestCallback],
+    Awaitable[HttpFullResponse]
+]
 
 
 class HttpRouter(metaclass=ABCMeta):
@@ -122,7 +134,7 @@ class HttpRouter(metaclass=ABCMeta):
     @abstractmethod
     def not_found_response(self) -> HttpResponse:
         """The response when a handler could not be found for a method/path
-        
+
         Returns:
             HttpResponse: The response when a route cannot be found.
         """
@@ -140,7 +152,7 @@ class HttpRouter(metaclass=ABCMeta):
             callback: HttpRequestCallback
     ) -> None:
         """Add an HTTP request handler
-        
+
         Args:
             methods (AbstractSet[str]): The supported HTTP methods.
             path (str): The path.
@@ -154,11 +166,11 @@ class HttpRouter(metaclass=ABCMeta):
             path: str
     ) -> Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]:
         """Resolve a request to a handler with the route matches
-        
+
         Args:
             method (str): The HTTP method.
             path (str): The path.
-        
+
         Returns:
             Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]: A
                 handler and the optional route matches.
@@ -175,7 +187,7 @@ class WebSocketRouter(metaclass=ABCMeta):
             callback: WebSocketRequestCallback
     ) -> None:
         """Add the WebSocket handler for a route
-        
+
         Args:
             path (str): The path.
             callback (WebSocketRequestCallback): The handler
@@ -187,10 +199,10 @@ class WebSocketRouter(metaclass=ABCMeta):
             path: str
     ) -> Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]:
         """Resolve a route to a handler
-        
+
         Args:
             path (str): The path
-        
+
         Returns:
             Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]: A
                 handler and possible route matches

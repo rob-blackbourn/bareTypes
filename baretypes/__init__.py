@@ -31,6 +31,7 @@ from .types import (
     WebSocket,
 
     HttpResponse,
+    HttpFullResponse,
     HttpRequestCallback,
     HttpMiddlewareCallback,
     WebSocketRequestCallback,
@@ -70,6 +71,7 @@ __all__ = [
     'WebSocket',
 
     'HttpResponse',
+    'HttpFullResponse',
     'HttpRequestCallback',
     'HttpMiddlewareCallback',
     'WebSocketRequestCallback',
