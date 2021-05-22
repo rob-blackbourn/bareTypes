@@ -35,7 +35,7 @@ class WebSocketInternalError(Exception):
 
 Scope = Mapping[str, Any]
 Message = Mapping[str, Any]
-Context = Optional[Mapping[str, Any]]
+Context = Mapping[str, Any]
 Info = Optional[MutableMapping[str, Any]]
 
 Receive = Callable[[], Awaitable[Message]]
