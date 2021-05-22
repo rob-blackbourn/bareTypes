@@ -198,13 +198,13 @@ class WebSocketRouter(metaclass=ABCMeta):
     def resolve(
             self,
             path: str
-    ) -> Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]:
+    ) -> Tuple[Optional[WebSocketRequestCallback], Optional[RouteMatches]]:
         """Resolve a route to a handler
 
         Args:
             path (str): The path
 
         Returns:
-            Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]: A
+            Tuple[Optional[WebSocketRequestCallback], Optional[RouteMatches]]: A
                 handler and possible route matches
         """
