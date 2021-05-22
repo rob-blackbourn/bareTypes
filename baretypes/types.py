@@ -165,7 +165,7 @@ class HttpRouter(metaclass=ABCMeta):
             self,
             method: str,
             path: str
-    ) -> Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]:
+    ) -> Tuple[Optional[HttpRequestCallback], RouteMatches]:
         """Resolve a request to a handler with the route matches
 
         Args:
@@ -173,7 +173,7 @@ class HttpRouter(metaclass=ABCMeta):
             path (str): The path.
 
         Returns:
-            Tuple[Optional[HttpRequestCallback], Optional[RouteMatches]]: A
+            Tuple[Optional[HttpRequestCallback], RouteMatches]: A
                 handler and the optional route matches.
         """
 
@@ -198,13 +198,13 @@ class WebSocketRouter(metaclass=ABCMeta):
     def resolve(
             self,
             path: str
-    ) -> Tuple[Optional[WebSocketRequestCallback], Optional[RouteMatches]]:
+    ) -> Tuple[Optional[WebSocketRequestCallback], RouteMatches]:
         """Resolve a route to a handler
 
         Args:
             path (str): The path
 
         Returns:
-            Tuple[Optional[WebSocketRequestCallback], Optional[RouteMatches]]: A
+            Tuple[Optional[WebSocketRequestCallback], RouteMatches]: A
                 handler and possible route matches
         """
