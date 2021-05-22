@@ -109,6 +109,7 @@ HttpFullResponse = Tuple[
 ]
 HttpResponse = Union[
     int,
+    Tuple[int],
     Tuple[int, Optional[Headers]],
     Tuple[int, Optional[Headers], Optional[Content]],
     HttpFullResponse
