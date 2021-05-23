@@ -127,7 +127,7 @@ HttpChainedCallback = Callable[
     Awaitable[HttpFullResponse]
 ]
 HttpMiddlewareCallback = Callable[
-    [Scope, Info, RouteMatches, Content, HttpRequestCallback],
+    [Scope, Info, RouteMatches, Content, HttpChainedCallback],
     Awaitable[HttpFullResponse]
 ]
 
