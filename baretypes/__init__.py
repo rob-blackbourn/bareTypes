@@ -33,6 +33,7 @@ from .types import (
     HttpResponse,
     HttpFullResponse,
     HttpRequestCallback,
+    HttpChainedCallback,
     HttpMiddlewareCallback,
     WebSocketRequestCallback,
 
@@ -73,6 +74,7 @@ __all__ = [
     'HttpResponse',
     'HttpFullResponse',
     'HttpRequestCallback',
+    'HttpChainedCallback',
     'HttpMiddlewareCallback',
     'WebSocketRequestCallback',
 
