@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "baretypes"
-version = "3.5.0"
+version = "3.6.0"
 description = "Types for bareASGI and bareClient"
 authors = ["Rob Blackbourn <rob.blackbourn@gmail.com>"]
 license = "Apache-2.0"

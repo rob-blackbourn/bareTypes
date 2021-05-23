@@ -122,6 +122,10 @@ WebSocketRequestCallback = Callable[
     [Scope, Info, RouteMatches, WebSocket],
     Awaitable[None]
 ]
+HttpChainedCallback = Callable[
+    [Scope, Info, RouteMatches, Content],
+    Awaitable[HttpFullResponse]
+]
 HttpMiddlewareCallback = Callable[
     [Scope, Info, RouteMatches, Content, HttpRequestCallback],
     Awaitable[HttpFullResponse]
